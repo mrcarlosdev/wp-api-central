@@ -8,7 +8,7 @@ To install WP API Central plugin you need to go to your plugins directory within
 
 Clone this repository.
 
-`git clone https://github.com/mrcarlosdev/wp-api-central.git`
+`git clone https://github.com/mrcarlosdev/wp-api-central.git/`
 
 After that, join the repository.
 
@@ -19,5 +19,7 @@ And move the folder content to the previous folder.
 `mv wp-api-central/* .`
 
 After doing so, you should be able to see the plugin deactivated in the Plugins section within Wordpress. https://yourwebsite/wp-admin/plugins.php.
+
+![Activate button within WP API Central on Plugins section](./img/activate_plugin.png)
 
 Click on Activate to activate the plugin.
