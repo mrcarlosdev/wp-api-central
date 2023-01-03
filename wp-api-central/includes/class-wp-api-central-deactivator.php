@@ -30,6 +30,6 @@ class WP_API_Central_Deactivator {
 
                 global $wpdb;
 
-                $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}azure_config" );
+                $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}azure_config;" );
 	}
 }
