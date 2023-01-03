@@ -38,7 +38,7 @@ function activate_wp_api_central() {
 /**
  * The code that runs during plugin deactivation.
  */
-function deactivate_plugin_name() {
+function deactivate_wp_api_central() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-api-central-deactivator.php';
 	WP_API_Central_Deactivator::deactivate();
 }
