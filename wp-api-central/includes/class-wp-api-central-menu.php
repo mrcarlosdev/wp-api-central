@@ -31,7 +31,7 @@ class WP_API_Central_Menu {
 			'manage_options', // Capability requirement to see the link
 					plugin_dir_path( __DIR__ ) . 'admin/view-connection-provider-page.php', // slug
 					null, // content function
-					plugin_dir_path( __DIR__ ) . 'admin/icons/wp-api-central-menu-logo.png', // icon
+					plugins_url('/../admin/icons/wp-api-central-menu-logo.png', __FILE__), // icon
 					'1'
 		  );
 	}
