@@ -4,7 +4,7 @@ WP API Central is a WordPress plugin that allows you to connect with cloud and g
 
 # Installation
 
-To install WP API Central plugin you need to go to your plugins directory within Wordpress. Usually 'wp-content/plugins'.
+To install WP API Central plugin you need to go to your plugins directory within Wordpress. Usually `wp-content/plugins`.
 
 Clone this repository.
 

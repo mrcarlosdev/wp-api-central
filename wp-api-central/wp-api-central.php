@@ -45,3 +45,13 @@ function deactivate_wp_api_central() {
 
 register_activation_hook( __FILE__, 'activate_wp_api_central' );
 register_deactivation_hook( __FILE__, 'deactivate_wp_api_central' );
+
+/**
+ * The code that makes the visible the plugin within the Wordpress menu.
+ */
+function menu_wp_api_central() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-api-central-menu.php';
+	WP_API_Central_Menu::display();
+}
+
+add_action( 'admin_menu', 'menu_wp_api_central' );
