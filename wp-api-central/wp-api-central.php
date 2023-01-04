@@ -56,14 +56,18 @@ function menu_wp_api_central() {
 
 add_action( 'admin_menu', 'menu_wp_api_central' );
 
-function enqueue_bootstrap_js_wp_api_central($hook) {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-api-central-menu.php';
-	WP_API_Central_Menu::EnqueueBootstrapJS($hook);
+function enqueue_bootstrap_js_wp_api_central() {
+    if ($hook != 'wp-api-central/admin/view-connection-provider-page.php') {
+            return;
+    }
+    wp_enqueue_script('bootstrapJs',plugins_url('/node_modules/bootstrap/dist/js/bootstrap.min.js',__FILE__),array('jquery'));
 }
 
-function enqueue_bootstrap_css_wp_api_central($hook) {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-api-central-menu.php';
-	WP_API_Central_Menu::EnqueueBootstrapCSS($hook);
+function enqueue_bootstrap_css_wp_api_central() {
+    if ($hook != 'wp-api-central/admin/view-connection-provider-page.php') {
+            return;
+    }
+    wp_enqueue_style('bootstrapCss',plugins_url('/node_modules/bootstrap/dist/css/bootstrap.min.css',__FILE__));
 }
 
 add_action('admin_enqueue_scripts','enqueue_bootstrap_js_wp_api_central');

@@ -35,18 +35,4 @@ class WP_API_Central_Menu {
 					'1'
 		  );
 	}
-
-	function EnqueueBootstrapJS($hook) {
-        if ($hook != 'wp-api-central/admin/view-connection-provider-page.php') {
-                return;
-        }
-        wp_enqueue_script('bootstrapJs',plugins_url('/../node_modules/bootstrap/dist/js/bootstrap.min.js',__FILE__),array('jquery'));
-	}
-
-	function EnqueueBootstrapCSS($hook) {
-        if ($hook != 'wp-api-central/admin/view-connection-provider-page.php') {
-                return;
-        }
-        wp_enqueue_style('bootstrapCss',plugins_url('/../node_modules/bootstrap/dist/css/bootstrap.min.css',__FILE__));
-	}
 }
