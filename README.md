@@ -18,6 +18,12 @@ And move the folder content to the previous folder.
 
 `mv wp-api-central/* .`
 
+Install dependencies:
+
+```
+npm install
+```
+
 After doing so, you should be able to see the plugin deactivated in the Plugins section within Wordpress. https://yourwebsite/wp-admin/plugins.php.
 
 ![Activate button within WP API Central on Plugins section](./img/activate_plugin.png)
