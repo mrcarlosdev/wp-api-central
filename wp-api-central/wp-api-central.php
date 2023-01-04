@@ -55,3 +55,16 @@ function menu_wp_api_central() {
 }
 
 add_action( 'admin_menu', 'menu_wp_api_central' );
+
+function enqueue_bootstrap_js_wp_api_central($hook) {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-api-central-menu.php';
+	WP_API_Central_Menu::EnqueueBootstrapJS($hook);
+}
+
+function enqueue_bootstrap_css_wp_api_central($hook) {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-api-central-menu.php';
+	WP_API_Central_Menu::EnqueueBootstrapCSS($hook);
+}
+
+add_action('admin_enqueue_scripts','enqueue_bootstrap_js_wp_api_central');
+add_action('admin_enqueue_scripts','enqueue_bootstrap_css_wp_api_central');

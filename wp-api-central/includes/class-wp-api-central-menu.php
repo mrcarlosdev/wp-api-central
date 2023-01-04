@@ -34,9 +34,6 @@ class WP_API_Central_Menu {
 					plugins_url('/../admin/icons/wp-api-central-menu-logo.png', __FILE__), // icon
 					'1'
 		  );
-
-		add_action('admin_enqueue_scripts','EnqueueBootstrapJS');
-		add_action('admin_enqueue_scripts','EnqueueBootstrapCSS');
 	}
 
 	function EnqueueBootstrapJS($hook) {
