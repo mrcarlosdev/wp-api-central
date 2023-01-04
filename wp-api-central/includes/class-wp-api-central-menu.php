@@ -29,9 +29,9 @@ class WP_API_Central_Menu {
 			'WP API Central', // Title of the page
 			'WP API Central', // Text to show on the menu link
 			'manage_options', // Capability requirement to see the link
-					plugin_dir_path( __FILE__ ) . 'admin/view-connection-provider-page.php', // slug
+					plugin_dir_path( __DIR__ ) . 'admin/view-connection-provider-page.php', // slug
 					null, // content function
-					plugin_dir_path( __FILE__ ) . 'admin/icons/wp-api-central-menu-logo.png', // icon
+					plugin_dir_path( __DIR__ ) . 'admin/icons/wp-api-central-menu-logo.png', // icon
 					'1'
 		  );
 	}
