@@ -70,7 +70,7 @@ function enqueue_bootstrap_css_wp_api_central($hook) {
     wp_enqueue_style('bootstrapCss',plugins_url('/node_modules/bootstrap/dist/css/bootstrap.min.css',__FILE__));
 }
 
-function EnqueueCustomJS($hook) {
+function enqueue_custom_js_wp_api_central($hook) {
     if ($hook != 'wp-api-central/admin/view-connection-provider-page.php') {
             return;
     }
@@ -88,7 +88,7 @@ function EnqueueCustomJS($hook) {
 
 add_action('admin_enqueue_scripts','enqueue_bootstrap_js_wp_api_central');
 add_action('admin_enqueue_scripts','enqueue_bootstrap_css_wp_api_central');
-add_action('admin_enqueue_scripts','EnqueueCustomJS');
+add_action('admin_enqueue_scripts','enqueue_custom_js_wp_api_central');
 
 function RemoveConfigField(){
     $nonce = $_POST['nonce'];
