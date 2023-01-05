@@ -89,3 +89,26 @@ function EnqueueCustomJS($hook) {
 add_action('admin_enqueue_scripts','enqueue_bootstrap_js_wp_api_central');
 add_action('admin_enqueue_scripts','enqueue_bootstrap_css_wp_api_central');
 add_action('admin_enqueue_scripts','EnqueueCustomJS');
+
+function RemoveConfigField(){
+    $nonce = $_POST['nonce'];
+    if (!wp_verify_nonce($nonce,'sec')) {
+            die('You don\'t have permissions');
+    }
+    $id = $_POST['id'];
+    global $wpdb;
+    $table = $wpdb->prefix."azure_config";
+    $wpdb->query($wpdb->prepare("UPDATE $table SET $id = %s", ''));
+}
+
+add_action('wp_ajax_deleterequest','RemoveConfigField');
+
+function TestAPIM(){
+    $nonce = $_POST['nonce'];
+    if (!wp_verify_nonce($nonce,'sec')) {
+            die('You don\'t have permissions');
+    }
+    $id = $_POST['id'];
+    alert($id);
+}
+add_action('wp_ajax_testapim','TestAPIM');
