@@ -49,7 +49,13 @@
         <tbody id="the-list">
                 <tr>
                         <td>Access Token</td>
-                        <td><?php echo $config_apim[0]['accessToken'];?></td>
+                        <td>
+                        <?php 
+                        if (array_key_exists(0, $config_apim)) {
+                                echo $config_apim[0]['accessToken'];
+                        }
+                        ?>
+                        </td>
                         <td>
                                 <a id="setAccessToken" class="page-title-action">Set new value</a>
                                 <a data-id="accesstoken" id="deleteAccessToken" class="page-title-action">Delete</a>
@@ -57,7 +63,13 @@
                 </tr>
                 <tr>
                         <td>Subscription Id</td>
-                        <td><?php echo $config_apim[0]['subscriptionId'];?></td>
+                        <td>
+                        <?php 
+                        if (array_key_exists(0, $config_apim)) {
+                                echo $config_apim[0]['subscriptionId'];
+                        }
+                        ?>        
+                        </td>
                         <td>
                                 <a id="setSubscriptionId" class="page-title-action">Set new value</a>
                                 <a data-id="subscriptionid" id="deleteSubscriptionId" class="page-title-action">Delete</a>
@@ -65,7 +77,13 @@
                 </tr>
                 <tr>
                         <td>Resource Group</td>
-                        <td><?php echo $config_apim[0]['resourceGroup'];?></td>
+                        <td>
+                        <?php 
+                        if (array_key_exists(0, $config_apim)) {
+                                echo $config_apim[0]['resourceGroup'];
+                        }
+                        ?> 
+                        </td>
                         <td>
                                 <a id="setResourceGroup" class="page-title-action">Set new value</a>
                                 <a data-id="resourcegroup" id="deleteResourceGroup" class="page-title-action">Delete</a>
@@ -73,7 +91,13 @@
                 </tr>
                 <tr>
                         <td>Service Name</td>
-                        <td><?php echo $config_apim[0]['serviceId'];?></td>
+                        <td>
+                        <?php 
+                        if (array_key_exists(0, $config_apim)) {
+                                echo $config_apim[0]['serviceId'];
+                        }
+                        ?>                         
+                        </td>
                         <td>
                                 <a id="setServiceId" class="page-title-action">Set new value</a>
                                 <a data-id="serviceid" id="deleteServiceId" class="page-title-action">Delete</a>
