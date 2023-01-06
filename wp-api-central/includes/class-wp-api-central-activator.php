@@ -34,5 +34,14 @@ class WP_API_Central_Activator {
                 `serviceId` VARCHAR(255) NULL);";
 
         $wpdb->query($sql);
+
+        $table = $wpdb->prefix."azure_config";       
+        $wpdb->insert($table, array(
+                'accessToken' => '',
+                'subscriptionId' => '',
+                'resourceGroup' => '', 
+                'serviceId' => '',
+        ));
+        
 	}
 }
