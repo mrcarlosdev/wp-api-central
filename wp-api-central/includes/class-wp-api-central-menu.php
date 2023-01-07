@@ -34,5 +34,7 @@ class WP_API_Central_Menu {
 					plugins_url('/../admin/icons/wp-api-central-menu-logo.png', __FILE__), // icon
 					'1'
 		  );
+
+		  add_submenu_page(plugin_dir_path( __DIR__ ) . 'admin/view-connection-provider-page.php', 'Widgets', 'Widgets', 'manage_options', plugin_dir_path( __DIR__ ) . 'admin/view-widgets-page.php');
 	}
 }
